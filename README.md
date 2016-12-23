@@ -1,13 +1,15 @@
 # Mango16 - 基于Yaf的Cmf管理系统
 
-Centos7.0 + PHP7.1 + Yaf 3.0.4 快速搭建高速的Lnmp栈，正在写，欢迎一起完成。
+> 知行合一，学以致用
+
+Centos7.0 + PHP7.1 + Yaf 3.0.4 快速搭建高速的Lnmp栈，作为平时班后练习。正在写，欢迎一起完成。
 
 ## What I Do
 - 基于zui的后台管理界面
 - 引入 laravel 中的 Eloquent
 - 简单的增删改查实现
 - 错误捕捉显示及日志记录
-- 静态资源采用第三方`七牛`托管
+- 静态资源采用第三方[七牛云](http://www.qiniu.com/?utm_campaign=baiduSEM&utm_source=baiduSEM&utm_medium=baiduSEM&utm_content=baiduSEM)托管
 - Composer管理包依赖
 
 ## Requirement

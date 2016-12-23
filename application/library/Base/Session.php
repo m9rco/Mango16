@@ -1,12 +1,10 @@
 <?php 
 namespace library\Base;
 use Yaf\Session as YafSession;
-ini_set('session.cookie_domain', '.sporte.cn');
+ini_set('session.cookie_domain', '.mango.cc');
 
 /**
 * Session 对Yaf\Session封装
-* @author wlw <wangliwei@eventmosh.com>
-* @date 2015.8.21 17:38(周五啊 快要下班了 啊哈哈)
 */
 class Session 
 {
@@ -39,9 +37,6 @@ class Session
 
     public static function getInstance()
     {
-/*    	if(is_null(self::$session)){
-	    	self::$session = new Session();
-    	}*/
     	if(self::$session instanceof self)
     	{
     		return self::$session;
