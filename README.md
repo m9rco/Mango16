@@ -1,6 +1,6 @@
 # Mango16 - 基于Yaf的Cmf管理系统
 
-Centos7.0 + PHP7.1 + Yaf 3.0.4 快速搭建高速的Lnmp栈
+Centos7.0 + PHP7.1 + Yaf 3.0.4 快速搭建高速的Lnmp栈，正在写，欢迎一起完成。
 
 ## What I Do
 - 基于zui的后台管理界面
@@ -8,7 +8,7 @@ Centos7.0 + PHP7.1 + Yaf 3.0.4 快速搭建高速的Lnmp栈
 - 简单的增删改查实现
 - 错误捕捉显示及日志记录
 - 静态资源采用第三方`七牛`托管
-
+- Composer管理包依赖
 
 ## Requirement
 - [Nginx](http://nginx.org/)
@@ -18,8 +18,12 @@ Centos7.0 + PHP7.1 + Yaf 3.0.4 快速搭建高速的Lnmp栈
 - [Yaf 3.0+](http://pecl.php.net/package/yaf)
 - [Zui 1.5.0](http://www.zui.sexy/#/)
 - [Eloquent 4.2](https://lvwenhan.com/laravel/421.html)
+- [Composer 1.0](http://pkg.phpcomposer.com/)
 
-+ Nginx 示例
+**  Nginx 示例 **
+
+---
+
 ```
 server {
     listen 80;
@@ -39,7 +43,9 @@ server {
 
 ```
 
-+ php.ini
+** php.ini **
+
+---
 
 ```
 extension="yaf.so"

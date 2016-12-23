@@ -164,6 +164,7 @@
 # list_to_tree($list, $pk='id',$pid = 'pid',$child = '_child',$root=0) 把返回的数据集转换成Tree
 
 namespace library\Base;
+use YaConf;
 class Tools {
 
 	const FLAG_NUMERIC = 1;
@@ -1741,7 +1742,7 @@ class Tools {
 	
     //静态资源url
     public static function asset_static($path){
-		return ESTATICS.ltrim($path,'/');
+		return YaConf::get('confinit.ESTATICS').ltrim($path,'/');
 	}
 
 	/**
@@ -1751,7 +1752,7 @@ class Tools {
      */
     public static function style()
     {
-    	$tag = STATIC_VERSION;
+    	$tag = YaConf::get('confinit.STATIC_VERSION');
     	if ( true ) {
     		
 			$cssTag = "?v=".$tag;
@@ -1776,7 +1777,7 @@ class Tools {
 	    		$res = $res[0];
 	    	}
 	        
-	        $min_static_url = ESTATICS . 'min/?f=';
+	        $min_static_url = YaConf::get('confinit.ESTATICS') . 'min/?f=';
 	        $styleString = implode(',', $res);
 	        return '<link href="' . $min_static_url . $styleString . $cssTag.'" rel="stylesheet" onerror="_cdnFallback(this)" />';
     	}
@@ -1816,7 +1817,7 @@ class Tools {
 	    		$res = $res[0];
 	    	}
 	        
-	        $min_static_url = ESTATICS . 'min/?f=';
+	        $min_static_url = YaConf::get('confinit.ESTATICS') . 'min/?f=';
 	        $scriptString = implode(',', $res);
 	        return '<script src="' . $min_static_url . $scriptString . $jsTag.'" onerror="_cdnFallback(this)"></script>';
 	    }

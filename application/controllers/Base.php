@@ -5,7 +5,6 @@ class BaseController extends Yaf\Controller_Abstract
     protected  $_module;
     protected  $_controller;
     protected  $_action;
-    const MODEL ='models\\';
 
     protected static $instance = [];
 	public function init()	
@@ -40,9 +39,9 @@ class BaseController extends Yaf\Controller_Abstract
 	{
         try{
             if($mark == true)
-	           	 $class = self::MODEL.$this->_module .'\\'.$this->_action.'\\'.$table_name;   
+	           	 $class = 'models\\'.$this->_module .'\\'.$this->_action.'\\'.$table_name;   
             else
-	           	 $class = self::MODEL.$this->_module .'\\'.$table_name;   
+	           	 $class = 'models\\'.$this->_module .'\\'.$table_name;   
 	        // 初始化
             if ( !isset(self::$instance[$table_name]) ) {
                 self::$instance[$table_name] = new $class;
