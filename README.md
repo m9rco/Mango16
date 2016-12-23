@@ -20,9 +20,8 @@ Centos7.0 + PHP7.1 + Yaf 3.0.4 快速搭建高速的Lnmp栈，正在写，欢迎
 - [Eloquent 4.2](https://lvwenhan.com/laravel/421.html)
 - [Composer 1.0](http://pkg.phpcomposer.com/)
 
-**  Nginx 示例 **
+**Nginx 示例**
 
----
 
 ```
 server {
@@ -43,9 +42,8 @@ server {
 
 ```
 
-** php.ini **
+**php.ini**
 
----
 
 ```
 extension="yaf.so"
