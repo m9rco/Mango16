@@ -4,7 +4,7 @@
 
 > 知行合一，学以致用
 
-Centos7.0 + PHP7.1 + Yaf 3.0.4 快速搭建高速的Lnmp栈，作为平时班后练习。正在写，欢迎一起完成。
+Centos7.0 + PHP7.1 + Yaf 3.0.4 快速搭建高速的Lnmp栈，作为平时班后练习。[静态资源](https://github.com/PuShaoWei/Mango16-static)
 
 ## What I Do
 - 基于zui的后台管理界面
