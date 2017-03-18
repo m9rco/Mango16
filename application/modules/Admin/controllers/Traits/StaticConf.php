@@ -30,7 +30,7 @@ trait StaticConf
 
             case 'account.account.company':
                 $options = [
-                    'title' => '体育易 - 公司信息',
+                    'title' => '息',
                     'keywords' => '',
                     'description' => '',
                     'style' => [
@@ -39,83 +39,6 @@ trait StaticConf
                     'script' => [
                         'sporte/b/desktop/js/manage/account/b-account-company.js',
                         'libs/webuploader/webuploader.nolog.min.js',
-                    ]
-                ];
-                break;
-
-    // ==================================================================
-    // 操作日志 
-    // ------------------------------------------------------------------  
-    //                 
-            case 'account.account.opratelog':
-                $options = [
-                    'title' => '体育易 - 操作日志',
-                    'keywords' => '',
-                    'description' => '',
-                    'style' => [
-                       'libs/jedate/skin/jedate.css'
-                    ],
-                    'script' => [
-                        'sporte/b/desktop/js/manage/account/b-account-company.js',
-                        'libs/jedate/jedate.min.js',
-                        'sporte/b/desktop/js/manage/account/b-account-opratelog.js',
-                    ]
-                ];
-                break;
-    // ==================================================================
-    // 子账号
-    // ------------------------------------------------------------------
-            case 'account.children.make':
-                $options = [
-                    'title' => '体育易 - 子账号创建',
-                    'keywords' => '',
-                    'description' => '',
-                    'style' => [
-                    ],
-                    'script' => [
-                      'sporte/b/desktop/js/manage/account/b-account-common.js',
-                    ]
-                ];
-                break;
-            case 'account.children.edit':
-                $options = [
-                    'title' => '体育易 - 子账号编辑',
-                    'keywords' => '',
-                    'description' => '',
-                    'style' => [
-                    ],
-                    'script' => [
-                      'sporte/b/desktop/js/manage/account/b-account-common.js',
-                    ]
-                ];
-                break;
-            case 'account.children.list':
-                $options = [
-                    'title' => '体育易 - 子账号列表',
-                    'keywords' => '',
-                    'description' => '',
-                    'style' => [
-                    ],
-                    'script' => [
-                      'sporte/b/desktop/js/manage/account/b-account-childList.js',
-                    ]
-                ];
-                break;
-
-    // ==================================================================
-    // 角色权限设置
-    // ------------------------------------------------------------------
-             case 'account.children.rolesetting':
-                $options = [
-                    'title' => '体育易 - 子账号管理',
-                    'keywords' => '',
-                    'description' => '',
-                    'style' => [
-                       'sporte/b/desktop/css/account/b-account-children.css',
-                    ],
-                    'script' => [
-                       'sporte/b/desktop/js/manage/account/b-account-common.js',
-                       'sporte/b/desktop/js/manage/account/b-account-roleseting.js',
                     ]
                 ];
                 break;

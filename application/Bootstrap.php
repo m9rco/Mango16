@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Database\Capsule\Manager as Capsule;
 /**
  * Bootstrap 
  * 
@@ -52,7 +51,7 @@ class Bootstrap extends Yaf\Bootstrap_Abstract
      */
     public function _initRoute(Yaf\Dispatcher $dispatcher) {
 
-        $config = new Yaf\Config\Ini(APPLICATION_PATH . '/config/routes.ini');
+        $config = new Yaf\Config\Ini(APPLICATION_PATH . '/config/Mroutes.ini');
         $dispatcher->getRouter()->addConfig($config);
     }
     
@@ -67,9 +66,9 @@ class Bootstrap extends Yaf\Bootstrap_Abstract
     public function _initDefaultDb(Yaf\Dispatcher $dispatcher)
     {
        Yaf\Loader::import('library/vendor/autoload.php');
-       $database = YaConf::get('databases.db');
-       // Eloquent ORM              
-       $capsule = new Capsule;
+       $database = YaConf::get('Mdatabases.db'); 
+       // Eloquent ORM               
+       $capsule = new \Illuminate\Database\Capsule\Manager;
        $capsule->addConnection($database); //创建连接
        $capsule->setAsGlobal(); //设定全局静态访问
        $capsule->bootEloquent(); // 启动Eloquet

@@ -21,7 +21,7 @@ class ManagoDispatchPlugin extends Yaf\Plugin_Abstract {
 		$module = $request->getModuleName();
 		// 模块有各自的BaseController ======================================================
 		$loader = Yaf\Loader::getInstance();
-		$loader->autoload('modules\\' . ucfirst($module) . '\\controllers\\Init');
+		$loader->autoload('modules\\' . ucfirst($module) . '\\controllers_Init');
 	}
 
 	public function dispatchLoopStartup(Yaf\Request_Abstract $request, Yaf\Response_Abstract $response) {
