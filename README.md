@@ -1,6 +1,6 @@
 # Mango16 - 基于Yaf的Cmf管理系统
 
-![image](http://static.mango16.cc/mango16LOGO.png)
+![image](http://static.mango16.cc/WechatIMG29.png)
 
 > 知行合一，学以致用
 

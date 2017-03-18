@@ -9,7 +9,7 @@ class BaseController extends Yaf\Controller_Abstract
     protected static $instance = [];
 	public function init()	
 	{
-        $this->_req = $this->getRequest();
+        $this->_req 	   = $this->getRequest();
         $this->_module 	   = $this->_req->getModuleName();
         $this->_controller = $this->_req->getControllerName();
         $this->_action	   = $this->_req->getActionName();

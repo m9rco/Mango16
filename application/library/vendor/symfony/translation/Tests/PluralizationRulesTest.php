@@ -11,6 +11,7 @@
 
 namespace Symfony\Component\Translation\Tests;
 
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Translation\PluralizationRules;
 
 /**
@@ -26,7 +27,7 @@ use Symfony\Component\Translation\PluralizationRules;
  *
  * @author Clemens Tolboom clemens@build2be.nl
  */
-class PluralizationRulesTest extends \PHPUnit_Framework_TestCase
+class PluralizationRulesTest extends TestCase
 {
     /**
      * We test failed langcode here.
@@ -37,7 +38,7 @@ class PluralizationRulesTest extends \PHPUnit_Framework_TestCase
      */
     public function testFailedLangcodes($nplural, $langCodes)
     {
-        $matrix = $this->generateTestData($nplural, $langCodes);
+        $matrix = $this->generateTestData($langCodes);
         $this->validateMatrix($nplural, $matrix, false);
     }
 
@@ -46,7 +47,7 @@ class PluralizationRulesTest extends \PHPUnit_Framework_TestCase
      */
     public function testLangcodes($nplural, $langCodes)
     {
-        $matrix = $this->generateTestData($nplural, $langCodes);
+        $matrix = $this->generateTestData($langCodes);
         $this->validateMatrix($nplural, $matrix);
     }
 
@@ -108,7 +109,7 @@ class PluralizationRulesTest extends \PHPUnit_Framework_TestCase
         }
     }
 
-    protected function generateTestData($plural, $langCodes)
+    protected function generateTestData($langCodes)
     {
         $matrix = array();
         foreach ($langCodes as $langCode) {
