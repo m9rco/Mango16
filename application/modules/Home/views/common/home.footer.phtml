@@ -1,0 +1,45 @@
+<?php
+$optionsRender = function($key) use ($options) {
+    if (isset($options[$key])) {
+        return $options[$key];
+    } else {
+        return '';
+    }
+};
+?>
+					<div class="row">
+						<div class="12u">
+
+							<!-- Contact -->
+								<section class="contact">
+									<header>
+										<h3>Nisl turpis nascetur interdum?</h3>
+									</header>
+									<p>Urna nisl non quis interdum mus ornare ridiculus egestas ridiculus lobortis vivamus tempor aliquet.</p>
+									<ul class="icons">
+										<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+										<li><a href="#" class="icon icon-facebook"><span>Facebook</span></a></li>
+										<li><a href="#" class="icon icon-google-plus"><span>Google+</span></a></li>
+										<li><a href="#" class="icon icon-pinterest"><span>Pinterest</span></a></li>
+										<li><a href="#" class="icon icon-dribbble"><span>Dribbble</span></a></li>
+										<li><a href="#" class="icon icon-linkedin"><span>Linkedin</span></a></li>
+									</ul>
+								</section>
+
+							<!-- Copyright -->
+								<div class="copyright">
+									<ul class="menu">
+										<li>&copy; Untitled. All rights reserved.</li>
+										<li>Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a> | More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a></li>
+										<li>Demo Images: <a href="http://mdomaradzki.deviantart.com/">Michael Domaradzki</a></li>
+									</ul>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	</body>
+</html>
+
+<?php echo library\Core\Tools::script($optionsRender('script'));?>

@@ -1,5 +1,16 @@
 {
-    "require": {
-        "illuminate/database": "~4.2"
-    }
+    "name": "pushaowei/library",
+    "require-dev": {
+        "illuminate/support": "^5.4",
+        "illuminate/validation": "^5.4",
+        "spatie/laravel-collection-macros": "^2.1",
+        "illuminate/database": "^5.4"
+    },
+    "authors": [
+        {
+            "name": "pushaowei",
+            "email": "542684913@qq.com"
+        }
+    ],
+    "require": {}
 }

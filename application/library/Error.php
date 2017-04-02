@@ -1,6 +1,6 @@
 <?php
 
-class Error extends Yaf_Controller_Abstract
+class Error extends Yaf\Controller_Abstract
 {
     /**
      * [错误处理函数]

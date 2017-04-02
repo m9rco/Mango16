@@ -1,7 +1,4 @@
-<?php 
-/**
- * 主办公共头部文件
- **/
+<?php
 
 $optionsRender = function($key) use ($options) {
 	if (isset($options[$key])) {
@@ -12,15 +9,13 @@ $optionsRender = function($key) use ($options) {
 };
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <?php echo Yaf\View\Simple::render('common/admin.meta.phtml'); ?>
   <meta name="description" content="<?php echo $optionsRender('description')?>">
-  <meta name="keywords" content="<?php echo $optionsRender('keywords')?>"> 
+  <meta name="keywords" 	 content="<?php echo $optionsRender('keywords')?>">
   <title><?php echo $optionsRender('title')?></title>
   <?php echo library\Base\Tools::style($optionsRender('style'));?>
 </head>
 <body>
-

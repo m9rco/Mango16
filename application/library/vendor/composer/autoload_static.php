@@ -7,7 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInit2f0247e0aa0947ca90d990b395c8963b
 {
     public static $files = array (
-        '3b5531f8bb4716e1b6014ad7e734f545' => __DIR__ . '/..' . '/illuminate/support/Illuminate/Support/helpers.php',
+        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
+        '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
     );
 
@@ -16,6 +17,19 @@ class ComposerStaticInit2f0247e0aa0947ca90d990b395c8963b
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\Translation\\' => 30,
+            'Symfony\\Component\\HttpFoundation\\' => 33,
+            'Symfony\\Component\\Finder\\' => 25,
+            'Spatie\\CollectionMacros\\' => 24,
+        ),
+        'I' => 
+        array (
+            'Illuminate\\Validation\\' => 22,
+            'Illuminate\\Translation\\' => 23,
+            'Illuminate\\Support\\' => 19,
+            'Illuminate\\Filesystem\\' => 22,
+            'Illuminate\\Database\\' => 20,
+            'Illuminate\\Contracts\\' => 21,
+            'Illuminate\\Container\\' => 21,
         ),
         'C' => 
         array (
@@ -32,6 +46,46 @@ class ComposerStaticInit2f0247e0aa0947ca90d990b395c8963b
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
         ),
+        'Symfony\\Component\\HttpFoundation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-foundation',
+        ),
+        'Symfony\\Component\\Finder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/finder',
+        ),
+        'Spatie\\CollectionMacros\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-collection-macros/src',
+        ),
+        'Illuminate\\Validation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/validation',
+        ),
+        'Illuminate\\Translation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/translation',
+        ),
+        'Illuminate\\Support\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/support',
+        ),
+        'Illuminate\\Filesystem\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/filesystem',
+        ),
+        'Illuminate\\Database\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/database',
+        ),
+        'Illuminate\\Contracts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/contracts',
+        ),
+        'Illuminate\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/container',
+        ),
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
@@ -39,23 +93,11 @@ class ComposerStaticInit2f0247e0aa0947ca90d990b395c8963b
     );
 
     public static $prefixesPsr0 = array (
-        'I' => 
+        'D' => 
         array (
-            'Illuminate\\Support' => 
+            'Doctrine\\Common\\Inflector\\' => 
             array (
-                0 => __DIR__ . '/..' . '/illuminate/support',
-            ),
-            'Illuminate\\Events' => 
-            array (
-                0 => __DIR__ . '/..' . '/illuminate/events',
-            ),
-            'Illuminate\\Database' => 
-            array (
-                0 => __DIR__ . '/..' . '/illuminate/database',
-            ),
-            'Illuminate\\Container' => 
-            array (
-                0 => __DIR__ . '/..' . '/illuminate/container',
+                0 => __DIR__ . '/..' . '/doctrine/inflector/lib',
             ),
         ),
     );

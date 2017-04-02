@@ -1,0 +1,16 @@
+<?php
+$optionsRender = function($key) use ($options) {
+	if (isset($options[$key])) {
+		return $options[$key];
+	} else {
+		return '';
+	}
+};
+?>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title><?php echo $optionsRender('title')?></title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <?php echo library\Core\Tools::style($optionsRender('style'));?>
+  </head>

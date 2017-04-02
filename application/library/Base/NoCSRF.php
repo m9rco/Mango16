@@ -1,25 +1,26 @@
 <?php
+namespace library\Base;
 
 // +----------------------------------------------------------------------
-// | CSRF安全验证类 
+// | CSRF安全验证类
 // +----------------------------------------------------------------------
 // | [Usage]
 // |    // 后端
 // |    use library\Base\NoCSRF;
-// |    session_start();   
+// |    session_start();
 // |    if ($this->getRequest()->isPost()) {
-// |            
+// |
 // |        try {
-// |            ##验证TOKEN  
+// |            ##验证TOKEN
 // |            NoCSRF::check( 'csrf_token', $_POST, true, 60*10, false ); //60*10为10分钟(null为不验证时间)
 // |            $result = 'CSRF check passed. Form parsed.';
 // |            //$this->getRequest()->getPost('field');
-// |            echo $result;       
+// |            echo $result;
 // |        } catch ( Exception $e ) {
-// |            echo $e->getMessage() . ' Form ignored.'; 
-// |        }      
-// |    } else {   
-// |        #生成TOKEN  
+// |            echo $e->getMessage() . ' Form ignored.';
+// |        }
+// |    } else {
+// |        #生成TOKEN
 // |        $token = NoCSRF::generate( 'csrf_token' );
 // |        $this->getView()->assign('token', $token);
 // |        $this->getView()->display(SITEBASE . '/vhost/www/views/test/form.phtml');
@@ -28,7 +29,6 @@
 // |    <input type="hidden" name="csrf_token" value="{$token}">
 // +----------------------------------------------------------------------
 
-namespace library\Base;
 use library\Base\Session;
 
 class NoCSRF
@@ -37,7 +37,7 @@ class NoCSRF
     protected static $doOriginCheck = false;
 
     /**
-     * Check CSRF tokens match between session and $origin. 
+     * Check CSRF tokens match between session and $origin.
      * Make sure you generated a token in the form before checking it.
      *
      * @param String $key The session and $origin key where to find the token.
@@ -45,7 +45,7 @@ class NoCSRF
      * @param Boolean $throwException (Facultative) TRUE to throw exception on check fail, FALSE or default to return false.
      * @param Integer $timespan (Facultative) Makes the token expire after $timespan seconds. (null = never)
 	 * @param Boolean $multiple (Facultative) Makes the token reusable and not one-time. (Useful for ajax-heavy requests).
-     * 
+     *
      * @return Boolean Returns FALSE if a CSRF attack is detected, TRUE otherwise.
      */
     public static function check( $key, $origin, $throwException=false, $timespan=null, $multiple=false )
@@ -77,7 +77,7 @@ class NoCSRF
             else
                 return false;
         }
-      
+
         // Check if session token matches form token
         if ( $origin[ $key ] != $hash )
             if($throwException)
@@ -115,7 +115,7 @@ class NoCSRF
 
         $extra = self::$doOriginCheck ? sha1( $_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT'] ) : '';
         //file_put_contents('/home/pushaowei/debug', var_export([__CLASS__,microtime(),debug_backtrace()],true),FILE_APPEND);
-        // token generation (basically base64_encode any random complex string, time() is used for token expiration) 
+        // token generation (basically base64_encode any random complex string, time() is used for token expiration)
         $token = base64_encode( time() . $extra . self::randomString( 32 ) );
         // store the one-time token in session
         $session->put('csrf_' . $key, $token);
