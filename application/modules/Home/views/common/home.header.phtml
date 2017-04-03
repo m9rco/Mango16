@@ -7,10 +7,73 @@ $optionsRender = function($key) use ($options) {
 	}
 };
 ?>
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title><?php echo $optionsRender('title')?></title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <?php echo library\Core\Tools::style($optionsRender('style'));?>
-  </head>
+	<!DOCTYPE html>
+	<html lang="en">
+	    <head>
+	        <meta charset="UTF-8">
+	        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	        <title><?php echo $optionsRender('title')?></title>
+					<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+			    <?php echo library\Core\Tools::style($optionsRender('style'));?>
+	    </head>
+	    <body>
+	        <div id="preloader">
+	            <div id="status"></div>
+	        </div>
+	        <section id="home" class="pfblock-image screen-height">
+	            <div class="home-overlay"></div>
+	            <div class="intro" style="top: 70%;">
+	                <h1>不在乎别人的质疑，只为做最好自己</h1>
+	                <div class="start">
+										<i class="fa fa-cog fa-spin"></i>
+										Care About Other Questions And I Just Try To Be Myse
+								</div>
+	            </div>
+	            <a href="#services">
+	                <div class="scroll-down">
+	                    <span>
+	                        <i class="fa fa-angle-down fa-2x"></i>
+	                    </span>
+	                </div>
+	            </a>
+	        </section>
+	        <header class="header">
+	            <nav class="navbar navbar-custom" role="navigation">
+	                <div class="container">
+	                    <div class="navbar-header">
+	                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+	                            <span class="sr-only">Toggle navigation</span>
+	                            <span class="icon-bar"></span>
+	                            <span class="icon-bar"></span>
+	                            <span class="icon-bar"></span>
+	                        </button>
+													<span class="navbar-heade">
+														<i class="navbar-brand" href="javascript:;"> Mango16</i>
+														<img src="<?=\YaConf::get('MconfInit.global.estatics')?>/mango16/home/images/logo.png"></img>
+													</span>
+											</div>
+	                    <div class="collapse navbar-collapse" id="custom-collapse">
+	                        <ul class="nav navbar-nav navbar-right">
+	                            <li>
+	                                <a href="#home">首页</a>
+	                            </li>
+	                            <li>
+	                                <a href="#services">特点</a>
+	                            </li>
+	                            <li>
+	                                <a href="#portfolio">搭建教程</a>
+	                            </li>
+	                            <li>
+	                                <a href="#skills">更新历史</a>
+	                            </li>
+	                            <li>
+	                                <a href="#testimonials">团队</a>
+	                            </li>
+	                            <li>
+	                                <a href="#contact">反馈</a>
+	                            </li>
+	                        </ul>
+	                    </div>
+	                </div>
+	            </nav>
+	        </header>

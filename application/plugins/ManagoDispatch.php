@@ -12,8 +12,8 @@ class ManagoDispatchPlugin extends Yaf\Plugin_Abstract {
 	public function routerStartup(Yaf\Request_Abstract $request, Yaf\Response_Abstract $response)
 	{
 		// 设置请求方式 1 pc浏览器, 2 手机浏览器, 3 微信
-		$request_method = Tools::is_mobile_request() ? ( ( Tools::is_weixin_request() ? 'WEIXIN' : 'WAP' ) ) : 'PC';
-		$request->request_method = $request_method;
+		//$request_method = Tools::is_mobile_request() ? ( ( Tools::is_weixin_request() ? 'WEIXIN' : 'WAP' ) ) : 'PC';
+		//$request->request_method = $request_method;
 	}
 
 	public function routerShutdown(Yaf\Request_Abstract $request, Yaf\Response_Abstract $response)

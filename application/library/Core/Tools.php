@@ -43,7 +43,7 @@ class Tools {
 			return $style->filter()
 									 ->unique()
 									 ->map( function ( $aliases )use( $url ,$tag ) {
-				return '<link href="'.$url.$aliases.$tag.'" rel="stylesheet" onerror="_cdnFallback(this)" />';
+				return '<link href="'.$url.$aliases.$tag.'" rel="stylesheet" />';
 			})->implode('');
     }
 
@@ -62,7 +62,7 @@ class Tools {
 			return $style->filter()
 									 ->unique()
 									 ->map( function ( $aliases )use( $url ,$tag ) {
-					return '<script src="'.$url.$aliases.$tag.'" onerror="_cdnFallback(this)"></script>';
+					return '<script src="'.$url.$aliases.$tag.'" ></script>';
 			})->implode('');
     }
 
