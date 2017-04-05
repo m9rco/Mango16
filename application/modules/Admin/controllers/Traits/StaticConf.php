@@ -22,7 +22,7 @@ trait StaticConf
         switch ($page) {
             case 'index.login':
                 $options = [
-                    'title' => '大神降临',
+                    'title' => 'Mango16 - login',
                     'keywords' => '',
                     'description' => '',
                     'style' => [

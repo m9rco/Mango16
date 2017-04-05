@@ -1,8 +1,9 @@
 <?php echo  Yaf\View\Simple::render('common/admin.header.phtml');?>
 <div class="top_div"></div>
-        <div class="col-md-offset-4 col-md-5" style="position: relative;">
-          <div class="container login_div" >
-            <div style="width: 165px; height: 96px; position: absolute; left:110px">
+        <div class="visible-lg"style="float:left;height:300px;width:300px;margin-right:200px;"></div>
+        <div class="container col-sm-4  col-lg-4" >
+          <div class="login_div" >
+            <div class="owl">
               <div class="tou"></div>
               <div class="initial_left_hand"  id="left_hand" style="left:100px;top:-12px;"></div>
               <div class="initial_right_hand" id="right_hand" style="right:-112px;top:-12px"></div>
@@ -54,11 +55,11 @@ $(function(){
 		}}, 2000);
 	});
 	//失去焦点
-	// $("input[name='password']").blur(function(){
-	// 	$("#left_hand").attr("class","initial_left_hand");
-	// 	$("#left_hand").attr("style","left:100px;top:-12px;");
-	// 	$("#right_hand").attr("class","initial_right_hand");
-	// 	$("#right_hand").attr("style","right:-112px;top:-12px");
-	// });
+	$("input[name='password']").blur(function(){
+		$("#left_hand").attr("class","initial_left_hand");
+		$("#left_hand").attr("style","left:100px;top:-12px;");
+		$("#right_hand").attr("class","initial_right_hand");
+		$("#right_hand").attr("style","right:-112px;top:-12px");
+	});
 });
 </script>
