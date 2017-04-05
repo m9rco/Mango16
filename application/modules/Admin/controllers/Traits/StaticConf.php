@@ -7,27 +7,28 @@ namespace modules\Admin\controllers\Traits;
 trait StaticConf
 {
 	public function options( $page )
-    {
+  {
         //  公共部分
         $common = [
                 'style' => [
-                'libs/icon/iconfont.css',
+                		'lib/dist/css/zui.min.css',
                 ],
                 'script' => [
-                     'libs/js/jquery.min.js',
+										'lib/dist/lib/jquery/jquery.js',
+                    'lib/dist/js/zui.min.js',
                 ]
             ];
         $options = [];
         switch ($page) {
-            case 'account.account.company':
+            case 'index.login':
                 $options = [
-                    'title' => '',
+                    'title' => '大神降临',
                     'keywords' => '',
                     'description' => '',
                     'style' => [
+											'mango16/admin/css/login.css',
                     ],
                     'script' => [
-                        'libs/webuploader/webuploader.nolog.min.js',
                     ]
                 ];
                 break;

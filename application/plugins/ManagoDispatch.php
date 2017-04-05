@@ -1,5 +1,4 @@
 <?php
-
 use library\Core\Tools;
 
 /**

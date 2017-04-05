@@ -16,6 +16,6 @@ $optionsRender = function($key) use ($options) {
   <meta name="description" content="<?php echo $optionsRender('description')?>">
   <meta name="keywords" 	 content="<?php echo $optionsRender('keywords')?>">
   <title><?php echo $optionsRender('title')?></title>
-  <?php echo library\Base\Tools::style($optionsRender('style'));?>
+  <?php echo library\Core\Tools::style($optionsRender('style'));?>
 </head>
 <body>

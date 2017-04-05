@@ -1,1 +1,64 @@
 <?php echo  Yaf\View\Simple::render('common/admin.header.phtml');?>
+<div class="top_div"></div>
+        <div class="col-md-offset-4 col-md-5" style="position: relative;">
+          <div class="container login_div" >
+            <div style="width: 165px; height: 96px; position: absolute; left:110px">
+              <div class="tou"></div>
+              <div class="initial_left_hand"  id="left_hand" style="left:100px;top:-12px;"></div>
+              <div class="initial_right_hand" id="right_hand" style="right:-112px;top:-12px"></div>
+          </div>
+          <div>
+            <form class="form-horizontal">
+                <span class="heading"> Login Mango16 </span>
+                <div class="form-group">
+                    <input type="account" class="form-control"  placeholder="用户名或电子邮件" autocomplete="off" name="account">
+                    <i class="icon icon-user"></i>
+                </div>
+                <div class="form-group help">
+                    <input type="password" class="form-control"  placeholder="密　码" autocomplete="off" name="password">
+                    <i class="icon icon-key"></i>
+                    <a href="#" class="fa fa-question-circle"></a>
+                </div>
+                <div class="form-group">
+                    <!-- <div class="switch">
+                        <input type="checkbox" value="None"  name="check"/>
+                        <label class="switch-inline">Remember me</label>
+                    </div> -->
+                    <button type="submit" class="btn btn-primary">登录</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<?php echo  Yaf\View\Simple::render('common/admin.footer.phtml');?>
+
+<script type="text/javascript">
+$(function(){
+	//得到焦点
+	$("input[name='password']").focus(function(){
+		$("#left_hand").animate({
+			left: "150",
+			top: " -38"
+		},{step: function(){
+			if(parseInt($("#left_hand").css("left"))>140){
+				$("#left_hand").attr("class","left_hand");
+			}
+		}}, 2000);
+		$("#right_hand").animate({
+			right: "-64",
+			top: "-38px"
+		},{step: function(){
+			if(parseInt($("#right_hand").css("right"))> -70){
+				$("#right_hand").attr("class","right_hand");
+			}
+		}}, 2000);
+	});
+	//失去焦点
+	// $("input[name='password']").blur(function(){
+	// 	$("#left_hand").attr("class","initial_left_hand");
+	// 	$("#left_hand").attr("style","left:100px;top:-12px;");
+	// 	$("#right_hand").attr("class","initial_right_hand");
+	// 	$("#right_hand").attr("style","right:-112px;top:-12px");
+	// });
+});
+</script>

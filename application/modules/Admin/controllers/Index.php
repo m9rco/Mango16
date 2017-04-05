@@ -1,9 +1,9 @@
 <?php
 use Illuminate\Database\Capsule\Manager as Capsule;
 /**
- * IndexController 
- * 
- * @uses InitController 
+ * IndexController
+ *
+ * @uses InitController
  * @version ${Id}$
  * @author Shaowei Pu <pushaowei@sporte.cn>
  */
@@ -21,7 +21,7 @@ class IndexController extends InitController{
 	{
 		if($this->_req->isPost())
 		{
-			
+
 
 		}else{
 /*

@@ -1,0 +1,12 @@
+<?php
+$optionsRender = function($key) use ($options) {
+    if (isset($options[$key])) {
+        return $options[$key];
+    } else {
+        return '';
+    }
+};
+?>
+</body>
+</html>
+<?php echo library\Core\Tools::script($optionsRender('script'));?>
