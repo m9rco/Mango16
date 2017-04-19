@@ -25,7 +25,7 @@
                         <input type="checkbox" value="None"  name="check"/>
                         <label class="switch-inline">Remember me</label>
                     </div> -->
-                    <button type="submit" class="btn btn-primary">登录</button>
+                    <span autofocus="autofocus"  class="login btn btn-primary" data-loading-text="正在登录..." >登录</span>
                 </div>
             </form>
         </div>
@@ -35,6 +35,20 @@
 
 <script type="text/javascript">
 $(function(){
+  $('.login').on('click',function(){
+    var _this  = $(this),
+        _parent= _this.parents('.form-horizontal'),
+        parcel = {
+                account  : _parent.find('input[name="account"]').val(),
+                password : _parent.find('input[name="password"]').val()
+      };
+      //_this.button('loading');
+      $.post('/admin/login',parcel,function(result){
+        console.log(_this);
+        _this.button('reset');
+      },'json');
+  });
+
 	//得到焦点
 	$("input[name='password']").focus(function(){
 		$("#left_hand").animate({

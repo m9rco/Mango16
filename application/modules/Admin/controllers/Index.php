@@ -19,15 +19,6 @@ class IndexController extends InitController{
 	 */
 	public function loginAction()
 	{
-		if($this->_req->isPost())
-		{
-
-
-		}else{
-/*
-			$user = $this->getInstance('User');
-			$user ->find(1)->toArray();*/
 			$this->display('login');
-		}
 	}
 }

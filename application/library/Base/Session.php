@@ -1,18 +1,18 @@
-<?php 
+<?php
 namespace library\Base;
 use Yaf\Session as YafSession;
-ini_set('session.cookie_domain', '.mango.cc');
+ini_set('session.cookie_domain', '.mango16.cc');
 
 /**
 * Session 对Yaf\Session封装
 */
-class Session 
+class Session
 {
 	/**
 	 * 	Yaf\Session
 	 */
 	private $yaf_session = null;
-	
+
 
 	/**
      *
@@ -50,7 +50,7 @@ class Session
 		if (session_status() === PHP_SESSION_ACTIVE) {
         	session_destroy();
         }
-		
+
 		$this->yaf_session = YafSession::getInstance();
 		$this->yaf_session->start();
 
@@ -78,7 +78,7 @@ class Session
 	{
 		$value = $this->yaf_session->get($key);
 
-		return !empty($value) ? $value : $default; 
+		return !empty($value) ? $value : $default;
 	}
 
 	/**
@@ -93,7 +93,7 @@ class Session
 	/**
 	 * 判断数据在 Session 中是否存在
 	 * @param  [type]  $key [description]
-	 * @return boolean      
+	 * @return boolean
 	 */
 	public function has($key)
 	{
@@ -103,7 +103,7 @@ class Session
 	/**
 	 * 移除 Session 中指定的数据
 	 * @param  [type] $key [description]
-	 * @return [boolean] 
+	 * @return [boolean]
 	 */
 	public function forget($key)
 	{
@@ -167,8 +167,8 @@ class Session
 	public function getFlash($key,$default='')
 	{
 		$data = $this->get(self::FLASH_NOW,[]);
-		
-		return isset($data[$key]) ? $data[$key] : $default; 
+
+		return isset($data[$key]) ? $data[$key] : $default;
 
 	}
 

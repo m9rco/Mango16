@@ -19,15 +19,6 @@ class Tools {
 			return new \Illuminate\Support\Collection( $receive );
 	}
 
-	/**
-	 * [Validator 验证器]
-	 * @param [type] $receivee [description]
-	 */
-	public static function Validator(array $receivee )
-	{
-			return new \Illuminate\Validatio\Validator( $receive );
-	}
-
 		/**
 		 * [style CSS]
 		 * @return [type] [description]
