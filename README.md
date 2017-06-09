@@ -2,7 +2,7 @@
 
 ![image](http://static.mango16.cc/WechatIMG29.png)
 
-> 知行合一，学以致用 集合众多`Web`开发新特性 ，来一起堆轮子吧，不太懂你的思想，我们只是最快的框架
+> 知行合一，学以致用 集合众多`Web`开发新特性 ，来一起堆轮子吧
 
 Centos7.0 + PHP7.1 + Yaf 3.0.4 快速搭建高速的Lnmp栈，作为平时班后练习。[静态资源](https://github.com/PuShaoWei/Mango16-static)
 
@@ -23,6 +23,10 @@ Centos7.0 + PHP7.1 + Yaf 3.0.4 快速搭建高速的Lnmp栈，作为平时班后
 - [Zui 1.5.0](http://www.zui.sexy/#/)
 - [Eloquent 4.2](https://lvwenhan.com/laravel/421.html)
 - [Composer 1.0](http://pkg.phpcomposer.com/)
+
+## The last
+
+不太懂你的思想，我们只是最快的框架
 
 **Nginx 示例**
 
