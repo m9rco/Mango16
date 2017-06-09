@@ -1,5 +1,7 @@
 <?php
 
+use \Illuminate\Database\Capsule\Manager;
+
 /**
  * Bootstrap 
  * 
@@ -67,10 +69,11 @@ class Bootstrap extends Yaf\Bootstrap_Abstract
     {
        Yaf\Loader::import('library/vendor/autoload.php');
        $database = YaConf::get('Mdatabases.db'); 
+
        // Eloquent ORM               
-       $capsule = new \Illuminate\Database\Capsule\Manager;
-       $capsule->addConnection($database); //创建连接
-       $capsule->setAsGlobal(); //设定全局静态访问
-       $capsule->bootEloquent(); // 启动Eloquet
+       $capsule = new Manager;
+       $capsule->addConnection($database);          // 创建连接
+       $capsule->setAsGlobal();                     // 设定全局静态访问
+       $capsule->bootEloquent();                    // 启动Eloquet
     }
 }
