@@ -1,5 +1,5 @@
 <?php
-namespace modules\Home\controllers\Traits;
+namespace modules\Www\controllers\Traits;
 /**
  * 静态资源配置项
  * @author:Shaowei pu

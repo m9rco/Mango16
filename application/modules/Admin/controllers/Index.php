@@ -19,6 +19,12 @@ class IndexController extends InitController{
 	 */
 	public function loginAction()
 	{
-			$this->display('login');
+        $this->display('login');
 	}
+
+	public function indexAction()
+    {
+        $this->redirect('index/login');
+        //var_dump($this->getRequest());
+    }
 }

@@ -19,13 +19,17 @@ class Bootstrap extends Yaf\Bootstrap_Abstract
      */
     public function _initConfig() 
     {
-      //把配置保存起来
+        //把配置保存起来
         $arrConfig = Yaf\Application::app()->getConfig();
         Yaf\Registry::set('config', $arrConfig);        
         //关闭自动加载模板目录
         Yaf\Dispatcher::getInstance()->autoRender(FALSE);
         Yaf\Dispatcher::getInstance()->throwException(TRUE);
         Yaf\Dispatcher::getInstance()->catchException(TRUE);
+
+        // ini
+        ini_set('session.cookie_domain', YaConf::get('MconfInit.global.session_domain'));
+        ini_set("session.save_path"    , YaConf::get('MconfInit.global.session_path'));
 
     }
 

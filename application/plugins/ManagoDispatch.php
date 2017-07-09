@@ -7,10 +7,18 @@ use library\Core\Tools;
  * @create : 2016-12-20
  */
 class ManagoDispatchPlugin extends Yaf\Plugin_Abstract {
-
+    /**
+     * 路由开始
+     *
+     * @param \Yaf\Request_Abstract  $request
+     * @param \Yaf\Response_Abstract $response
+     */
 	public function routerStartup(Yaf\Request_Abstract $request, Yaf\Response_Abstract $response)
 	{
-		// 设置请求方式 1 pc浏览器, 2 手机浏览器, 3 微信
+	    $host               =  explode( '.',$request->getServer('HTTP_HOST'));
+        $request->setModuleName(ucwords($host[0]));
+
+        // 设置请求方式 1 pc浏览器, 2 手机浏览器, 3 微信
 		//$request_method = Tools::is_mobile_request() ? ( ( Tools::is_weixin_request() ? 'WEIXIN' : 'WAP' ) ) : 'PC';
 		//$request->request_method = $request_method;
 	}

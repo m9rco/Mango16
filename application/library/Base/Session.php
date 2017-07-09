@@ -1,7 +1,6 @@
 <?php
 namespace library\Base;
-use Yaf\Session as YafSession;
-ini_set('session.cookie_domain', '.mango16.cc');
+use Yaf;
 
 /**
 * Session 对Yaf\Session封装
@@ -47,11 +46,11 @@ class Session
 
 	private function __construct( )
 	{
-		if (session_status() === PHP_SESSION_ACTIVE) {
+        if (session_status() === PHP_SESSION_ACTIVE) {
         	session_destroy();
         }
 
-		$this->yaf_session = YafSession::getInstance();
+		$this->yaf_session = Yaf\Session::getInstance();
 		$this->yaf_session->start();
 
 		$this->moveFlash();

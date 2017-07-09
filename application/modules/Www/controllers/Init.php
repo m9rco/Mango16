@@ -1,5 +1,5 @@
 <?php
-use modules\Home\controllers\Traits\StaticConf;
+use modules\Www\controllers\Traits\StaticConf;
 
 /**
  * [init 初始化]
