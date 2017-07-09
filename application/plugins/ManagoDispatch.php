@@ -33,17 +33,17 @@ class ManagoDispatchPlugin extends Yaf\Plugin_Abstract {
 	}
 
 	public function dispatchLoopStartup(Yaf\Request_Abstract $request, Yaf\Response_Abstract $response) {
-		if( $request->isPost() && $request->isXmlHttpRequest() )
-		{
-			$module = $request->getModuleName();
-			$class  = 'modules\\' . ucfirst($module) . '\\controllers\\Helper\\ValidateHelper';
-			$action = $request->getActionName().'Validate';
-			// if (!headers_sent()){
-			// 	header("Content-Type: application/json; charset=utf-8");
-			// }
-			$v_obj  = new $class;
-			echo $v_obj->$action( $request->getPost() ); exit;
-		}
+//		if( $request->isPost() && $request->isXmlHttpRequest() )
+//		{
+//			$module = $request->getModuleName();
+//			$class  = 'modules\\' . ucfirst($module) . '\\controllers\\Helper\\ValidateHelper';
+//			$action = $request->getActionName().'Validate';
+//			// if (!headers_sent()){
+//			// 	header("Content-Type: application/json; charset=utf-8");
+//			// }
+//			$v_obj  = new $class;
+//			echo $v_obj->$action( $request->getPost() ); exit;
+//		}
 	}
 
 	public function preDispatch(Yaf\Request_Abstract $request, Yaf\Response_Abstract $response) {

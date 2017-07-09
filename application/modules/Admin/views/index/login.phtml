@@ -1,79 +1,85 @@
 <?php echo  Yaf\View\Simple::render('common/admin.header.phtml');?>
-<div class="top_div"></div>
-        <div class="visible-lg"style="float:left;height:300px;width:300px;margin-right:200px;"></div>
-        <div class="container col-sm-4  col-lg-4" >
-          <div class="login_div" >
-            <div class="owl">
-              <div class="tou"></div>
-              <div class="initial_left_hand"  id="left_hand" style="left:100px;top:-12px;"></div>
-              <div class="initial_right_hand" id="right_hand" style="right:-112px;top:-12px"></div>
-          </div>
-          <div>
-            <form class="form-horizontal">
-                <span class="heading"> Login Mango16 </span>
-                <div class="form-group">
-                    <input type="account" class="form-control"  placeholder="用户名或电子邮件" autocomplete="off" name="account">
-                    <i class="icon icon-user"></i>
-                </div>
-                <div class="form-group help">
-                    <input type="password" class="form-control"  placeholder="密　码" autocomplete="off" name="password">
-                    <i class="icon icon-key"></i>
-                    <a href="#" class="fa fa-question-circle"></a>
-                </div>
-                <div class="form-group">
-                    <!-- <div class="switch">
-                        <input type="checkbox" value="None"  name="check"/>
-                        <label class="switch-inline">Remember me</label>
-                    </div> -->
-                    <span autofocus="autofocus"  class="login btn btn-primary" data-loading-text="正在登录..." >登录</span>
-                </div>
-            </form>
-        </div>
+<div class="login-container" style="height:100%">
+    <!-- 动态云层动画 开始 -->
+    <div class="clouds clouds-footer"></div>
+    <div class="clouds"></div>
+    <div class="clouds clouds-fast"></div>
+    <!-- 动态云层动画 结束 -->
+
+    <!-- 顶部导航条 开始 -->
+    <div class="header">
+        <span>欢迎登录后台管理界面平台</span>
+        <ul>
+            <li><a href="/">回首页</a></li>
+            <li>
+                <a href="javascript:void(0)" target="_blank"><b style="color:#fff">帮助</b></a>
+            </li>
+            <li>
+                <a href="http://sw.bos.baidu.com/sw-search-sp/software/4bcf5e4f1835b/ChromeStandalone_54.0.2840.99_Setup.exe" target="_blank">
+                    <b style="color:#fff">推荐谷歌浏览器</b>
+                </a>
+            </li>
+        </ul>
     </div>
+    <!-- 顶部导航条 结束 -->
+
+    <!-- 页面表单主体 开始 -->
+    <div class="container" style="top:50%;margin-top:-300px">
+
+        <form onsubmit="return false;" data-time="0.001" data-auto="true" method="post" class="content layui-form">
+            <div class="people">
+                <div class="tou"></div>
+                <div id="left-hander" class="initial_left_hand transition"></div>
+                <div id="right-hander" class="initial_right_hand transition"></div>
+            </div>
+            <ul>
+                <li>
+                    <input name='username' style='display:none'/>
+                    <input required="required"
+                           pattern="^\S{4,}$"
+                           title="请输入4位及以上的字符"
+                           type="text"
+                           name="username"
+                           value="admin"
+                           autocomplete="off"
+                           autofocus="autofocus"
+                           class="login-input username"
+                           placeholder="请输入用户名/手机号码"/>
+                </li>
+                <li>
+                    <input name='password' style='display:none'/>
+                    <input required="required"
+                           pattern="^\S{4,}$"
+                           title="请输入4位及以上的字符"
+                           type="password"
+                           name="password"
+                           value="admin"
+                           autocomplete="off"
+                           class="login-input password"
+                           placeholder="请输入密码"/>
+                </li>
+                <li class="text-center">
+                    <button type="submit" class="layui-btn layui-disabled" data-form-loaded="立 即 登 入">正 在 载 入</button>
+                    <a style="position:absolute;display:block;right:0" href="javascript:void(0)">忘记密码？</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div class="footer">Mango16.cc © 2016~2017</div>
 </div>
+
 <?php echo  Yaf\View\Simple::render('common/admin.footer.phtml');?>
-
-<script type="text/javascript">
-$(function(){
-  $('.login').on('click',function(){
-    var _this  = $(this),
-        _parent= _this.parents('.form-horizontal'),
-        parcel = {
-                account  : _parent.find('input[name="account"]').val(),
-                password : _parent.find('input[name="password"]').val()
-      };
-      //_this.button('loading');
-      $.post('/admin/login',parcel,function(result){
-        console.log(_this);
-        _this.button('reset');
-      },'json');
-  });
-
-	//得到焦点
-	$("input[name='password']").focus(function(){
-		$("#left_hand").animate({
-			left: "150",
-			top: " -38"
-		},{step: function(){
-			if(parseInt($("#left_hand").css("left"))>140){
-				$("#left_hand").attr("class","left_hand");
-			}
-		}}, 2000);
-		$("#right_hand").animate({
-			right: "-64",
-			top: "-38px"
-		},{step: function(){
-			if(parseInt($("#right_hand").css("right"))> -70){
-				$("#right_hand").attr("class","right_hand");
-			}
-		}}, 2000);
-	});
-	//失去焦点
-	$("input[name='password']").blur(function(){
-		$("#left_hand").attr("class","initial_left_hand");
-		$("#left_hand").attr("style","left:100px;top:-12px;");
-		$("#right_hand").attr("class","initial_right_hand");
-		$("#right_hand").attr("style","right:-112px;top:-12px");
-	});
-});
+<script>
+    if (window.location.href.indexOf('#') > -1) {
+        window.location.href = window.location.href.split('#')[0];
+    }
+    require(['jquery'], function ($) {
+        $('[name="password"]').on('focus', function () {
+            $('#left-hander').removeClass('initial_left_hand').addClass('left_hand');
+            $('#right-hander').removeClass('initial_right_hand').addClass('right_hand')
+        }).on('blur', function () {
+            $('#left-hander').addClass('initial_left_hand').removeClass('left_hand');
+            $('#right-hander').addClass('initial_right_hand').removeClass('right_hand')
+        });
+    });
 </script>

@@ -10,21 +10,18 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 
 class IndexController extends InitController{
 
-
-	/**
-	 * [loginAction 登录]
-	 * @author 		Shaowei Pu <pushaowei@sporte.cn>
-	 * @CreateTime	2016-12-22T18:33:55+0800
-	 * @return                              [type] [description]
-	 */
-	public function loginAction()
-	{
-        $this->display('login');
-	}
-
+    /**
+     * 登录
+     *
+     */
 	public function indexAction()
     {
-        $this->redirect('index/login');
-        //var_dump($this->getRequest());
+        if($this->_req->isPost()){
+            $post = $this->_req->getPost();
+            if( $post['username'] == $post['password'] ){
+                $this->success('登录成功，正在进入系统...','main/index');
+            }
+        }
+        $this->display('login');
     }
 }

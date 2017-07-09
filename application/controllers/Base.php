@@ -1,6 +1,9 @@
-<?php 
+<?php
+use controllers\Traits\Jump;
+
 class BaseController extends Yaf\Controller_Abstract 
 {
+    use Jump;
     protected  $_req;
     protected  $_module;
     protected  $_controller;

@@ -1,5 +1,4 @@
 <?php
-
 $optionsRender = function($key) use ($options) {
 	if (isset($options[$key])) {
 		return $options[$key];
@@ -12,10 +11,10 @@ $optionsRender = function($key) use ($options) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <?php echo Yaf\View\Simple::render('common/admin.meta.phtml'); ?>
+  <?php  echo Yaf\View\Simple::render('common/admin.meta.phtml'); ?>
   <meta name="description" content="<?php echo $optionsRender('description')?>">
   <meta name="keywords" 	 content="<?php echo $optionsRender('keywords')?>">
   <title><?php echo $optionsRender('title')?></title>
-  <?php echo library\Core\Tools::style($optionsRender('style'));?>
+  <?php  echo library\Core\Tools::style($optionsRender('style'));?>
 </head>
 <body>

@@ -11,22 +11,25 @@ trait StaticConf
         //  公共部分
         $common = [
                 'style' => [
-                		'lib/dist/css/zui.min.css',
+                        'static/plugs/bootstrap/css/bootstrap.min.css',
+                        'static/plugs/layui/css/layui.css',
+                        'static/theme/default/css/console.css',
+                        'static/theme/default/css/animate.css'
                 ],
                 'script' => [
-										'lib/dist/lib/jquery/jquery.js',
-                    'lib/dist/js/zui.min.js',
+                    'static/plugs/require/require.js',
+                    'static/admin/app.js',
                 ]
             ];
         $options = [];
         switch ($page) {
-            case 'index.login':
+            case 'index.index':
                 $options = [
                     'title' => 'Mango16 - login',
                     'keywords' => '',
                     'description' => '',
                     'style' => [
-											'mango16/admin/css/login.css',
+                        'static/theme/default/css/login.css',
                     ],
                     'script' => [
                     ]
